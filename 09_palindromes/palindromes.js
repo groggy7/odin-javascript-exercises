@@ -1,12 +1,8 @@
 const palindromes = function (string) {
     const regex = /[^\ws]/g;
-    string = string.toLowerCase()
-    string = string.replace(regex, "")
+    string = string.toLowerCase().replace(regex, "")
 
-    let reversedString = ""
-    for(let i = string.length - 1; i >= 0; i--) {
-        reversedString += string[i]
-    }
+    const reversedString = string.split('').reverse().join('')
 
     return string === reversedString
 };
